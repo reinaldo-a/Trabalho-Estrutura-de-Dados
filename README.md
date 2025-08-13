@@ -1,20 +1,14 @@
 # 📚 Sistema de Cadastro de Notas de Alunos
 
-Este projeto é um sistema simples para cadastro, gerenciamento e consulta de notas de alunos.  
-O objetivo é facilitar o acompanhamento do desempenho escolar, permitindo registrar informações de forma organizada.
+
+Este projeto foi desenvolvido para a disciplina de Estrutura de Dados, com o objetivo de criar uma biblioteca em C que utilize funções e ponteiros, a partir de um tema de escolha livre.
+O tema escolhido pela equipe foi o gerenciamento e a consulta de notas de alunos, visando facilitar o acompanhamento do desempenho escolar e permitir o registro das informações de forma prática e organizada.
 
 ## 🚀 Funcionalidades
 - Cadastro de alunos
 - Registro de notas por disciplina
-- Consulta das notas cadastradas
 - Cálculo automático da média
 - Indicação de aprovação ou reprovação
-
-## 🛠️ Tecnologias Utilizadas
-- **Linguagem:** Python / Django (ou outra que você estiver usando)
-- **Banco de Dados:** SQLite / MySQL / PostgreSQL
-- **Frontend:** HTML, CSS, JavaScript (opcional)
-- **Outros:** Bootstrap, Tailwind, etc. (caso use)
 
 ## 📷 Demonstração
 _(Adicione prints de tela ou GIFs mostrando o sistema funcionando)_
