@@ -1,5 +1,5 @@
-#ifndef alunos.h
-#define alunos_h
+#ifndef ALUNOS_H
+#define ALUNOS_H
 
 
 
