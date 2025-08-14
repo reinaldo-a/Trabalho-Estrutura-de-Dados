@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <alunos.h>
+#include "alunos.h"
 
 int main(){
 
