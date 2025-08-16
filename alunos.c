@@ -37,5 +37,6 @@ void media(int a, int m, char nome[a][100], char materia[m][100], float nota[a][
         total = total + media;
         printf("Média do aluno %s: %f\n", nome[i], media);
     }
+    total = total / a;
     printf("Média da truma %f\n", total);
 }
