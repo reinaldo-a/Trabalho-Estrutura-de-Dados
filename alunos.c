@@ -19,7 +19,7 @@ void getnota(int a, int m, char nome[a][100], char materia[m][100], float nota[a
     for(int i = 0; i < a; i++) {
         printf("Adicionando notas do aluno %s: \n", nome[i]);
         for(int e = 0; e < m; e++) {
-            printf("Digite a nota de %s: ", materia[e]);
+            printf("Nota de %s: ", materia[e]);
             scanf("%f", &nota[i][e]);
         }
     }
@@ -35,8 +35,8 @@ void media(int a, int m, char nome[a][100], char materia[m][100], float nota[a][
         }
         media = media / m;
         total = total + media;
-        printf("Média do aluno %s: %f\n", nome[i], media);
+        printf("Média do aluno %s: %.2f\n", nome[i], media);
     }
     total = total / a;
-    printf("Média da truma %f\n", total);
+    printf("Média da turma %.2f\n", total);
 }

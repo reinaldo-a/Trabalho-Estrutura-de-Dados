@@ -8,19 +8,25 @@ int main() {
     int a, m;
 
     //Preenchendo variável co função que preencher valores inteiros
-    getint(&a, "Quantos alunos serão avaliados?\n");
-    getint(&m, "Quantas materias tem cada aluno?\n");
+    getint(&a, "Quantos alunos serão avaliados?: ");
 
-    // Vetores para receber os nomes dos alunos, suas mareias e suas notas;
+    // Matriz para receber nome dos alunos.
     char nome[a][100];
-    char materia[m][100];
-    float nota[a][m];
     
     // Pega o nome de cada aluno e aloca por referencia na matriz nome
-    getstringmatriz( a, nome, "Digite o nome do %dº aluno\n");
+    printf("Digite o nome dos alunos.\n");
+    getstringmatriz( a, nome, "%dº aluno: ");
+
+    //Preenchendo variável co função que preencher valores inteiros
+    getint(&m, "Quantas materias tem cada aluno?: ");
+
+    // Matrizes para receber mareias e notas dos alunos;
+    char materia[m][100];
+    float nota[a][m];
 
     // Pega o nome das materias do curso e aloca por referencia na matriz materia
-    getstringmatriz( m, materia, "Digite o nome da %dº materia do curso.\n");
+    printf("Digite o nome das materias.\n");
+    getstringmatriz( m, materia, "%dº materia:");
 
     /* 
         Aloca a nota de cada aluno de acordo com a casa do vetor ex:
