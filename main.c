@@ -1,41 +1,46 @@
 #include <stdio.h>
-#include "alunos.h"
+#include "devburro.h" // Protótipos e MAX_ALUNOS
 
 int main() {
+    char nomes[MAX_ALUNOS][50]; // Matriz de nomes
+    float notas[MAX_ALUNOS];    // Matriz de notas
+    int qtd = 0;                 // Quantidade atual de alunos
+    int opcao;                   // Opção do menu
 
-    // a = número de alunos da escola
-    // m = número de matérias da escola
-    int a, m;
+    // Repete até escolher sair
+    do {
+        // Menu
+        printf("\n--- Sistema de Notas ---\n");
+        printf("1. Inserir aluno\n");
+        printf("2. Listar alunos\n");
+        printf("3. Atualizar aluno\n");
+        printf("4. Remover aluno\n");
+        printf("5. Estatísticas (min, max, média)\n");
+        printf("6. Mostrar endereços de memória das notas\n");
+        printf("0. Sair\n");
+        printf("Escolha: ");
+        scanf("%d", &opcao);
 
-    //Preenchendo variável co função que preencher valores inteiros
-    getint(&a, "Quantos alunos serão avaliados?: ");
+        // Executa ação escolhida
+        if (opcao == 1) {
+            inserirAluno(nomes, notas, &qtd);
+        } else if (opcao == 2) {
+            listarAlunos(nomes, notas, qtd);
+        } else if (opcao == 3) {
+            atualizarAluno(nomes, notas, qtd);
+        } else if (opcao == 4) {
+            removerAluno(nomes, notas, &qtd);
+        } else if (opcao == 5) {
+            float min, max, media;
+            estatisticas(notas, qtd, &min, &max, &media);
+            printf("Nota mínima: %.2f\n", min);
+            printf("Nota máxima: %.2f\n", max);
+            printf("Nota média: %.2f\n", media);
+        } else if (opcao == 6) {
+            mostrarEnderecos(notas, qtd);
+        }
 
-    // Matriz para receber nome dos alunos.
-    char nome[a][100];
-    
-    // Pega o nome de cada aluno e aloca por referencia na matriz nome
-    printf("Digite o nome dos alunos.\n");
-    getstringmatriz( a, nome, "%dº aluno: ");
-
-    //Preenchendo variável co função que preencher valores inteiros
-    getint(&m, "Quantas materias tem cada aluno?: ");
-
-    // Matrizes para receber mareias e notas dos alunos;
-    char materia[m][100];
-    float nota[a][m];
-
-    // Pega o nome das materias do curso e aloca por referencia na matriz materia
-    printf("Digite o nome das materias.\n");
-    getstringmatriz( m, materia, "%dº materia:");
-
-    /* 
-        Aloca a nota de cada aluno de acordo com a casa do vetor ex:
-        Quando o aluno tem seu nome na linha 0 = nome [0]["nome do aluno"] suas notas vão estar na 
-        linha 0 do vetor nota[0][nota em cada coluna] que sera referenciado.
-     */
-    getnota(a, m, nome, materia, nota);
-
-    media(a, m, nome, materia, nota);
+    } while (opcao != 0); // Repete até escolher sair
 
     return 0;
 }
