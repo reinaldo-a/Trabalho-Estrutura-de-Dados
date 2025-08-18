@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "devburro.h" // Protótipos e MAX_ALUNOS
+#include "devburro.h"
 
 int main() {
     char nomes[MAX_ALUNOS][50]; // Matriz de nomes
