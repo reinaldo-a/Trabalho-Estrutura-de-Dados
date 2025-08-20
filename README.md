@@ -19,9 +19,9 @@ projeto_notas
 
 main.c # Programa principal
 
-devburro.c # Implementação das funções
+dvb.c # Implementação das funções
 
-devburro.h # Protótipos das funções e constantes
+dvb.h # Protótipos das funções e constantes
 
 README.md # Documentação do projeto
 
@@ -63,5 +63,5 @@ README.md # Documentação do projeto
 No terminal, usando o GCC:
 
 ```bash
-gcc main.c funcoes.c -o sistema_notas
+gcc main.c dvb.c -o sistema_notas
 ./sistema_notas

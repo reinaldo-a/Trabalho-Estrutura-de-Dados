@@ -1,5 +1,5 @@
-#ifndef DEVBURRO_H
-#define DEVBURRO_H
+#ifndef DVB_H
+#define DVB_H
 
 //sala só pode ter esse total maximo de alunos
 #define MAX_ALUNOS 50

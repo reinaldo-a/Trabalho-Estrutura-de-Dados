@@ -1,6 +1,6 @@
 #include <stdio.h>   // printf, scanf
 #include <string.h>  // strcpy
-#include "devburro.h" // header com MAX_ALUNOS e protótipos
+#include "dvb.h" // header com MAX_ALUNOS e protótipos
 
 // Insere um aluno no array
 void inserirAluno(char nomes[][50], float notas[], int *qtd) {
@@ -31,7 +31,6 @@ void listarAlunos(char nomes[][50], float notas[], int qtd) {
 void atualizarAluno(char nomes[][50], float notas[], int qtd) {
     int indice;
     listarAlunos(nomes, notas, qtd); // Mostra lista
-    if (qtd == 0) return;
 
     printf("Digite o índice do aluno que deseja atualizar: ");
     scanf("%d", &indice); // Escolhe índice
@@ -51,7 +50,6 @@ void atualizarAluno(char nomes[][50], float notas[], int qtd) {
 void removerAluno(char nomes[][50], float notas[], int *qtd) {
     int indice;
     listarAlunos(nomes, notas, *qtd); // Mostra lista
-    if (*qtd == 0) return;
 
     printf("Digite o índice do aluno a remover: ");
     scanf("%d", &indice); // Escolhe índice
@@ -62,7 +60,7 @@ void removerAluno(char nomes[][50], float notas[], int *qtd) {
     }
     // Desloca elementos para "fechar" espaço do removido
     for (int i = indice; i < *qtd - 1; i++) {
-        strcpy(nomes[i], nomes[i + 1]);
+        strcpy(nomes[i], nomes[i + 1]); //serve pra copiar uma string para outra.
         notas[i] = notas[i + 1];
     }
     (*qtd)--; // Reduz quantidade
@@ -75,7 +73,7 @@ void estatisticas(float notas[], int qtd, float *min, float *max, float *media) 
         *min = *max = *media = 0;
         return;
     }
-    *min = *max = notas[0]; // Inicializa
+    *min = *max = notas[0]; // Inicializagit pull
     float soma = 0;
     for (int i = 0; i < qtd; i++) {
         if (notas[i] < *min) *min = notas[i];
