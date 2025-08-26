@@ -1,3 +1,8 @@
+#Equipe:
+  Ítalo Diego Teixeira Paes
+  Reinaldo Soares Assunção Junior
+  Arthur Guimarães Miranda Prates
+
 # Sistema de Notas de Alunos em C
 
 ## Descrição do Projeto
